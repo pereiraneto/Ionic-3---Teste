@@ -9,15 +9,9 @@
 
 <ion-content padding>
   <ion-item>
-    Hello World !!
+    <ion-label floating>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="personName"></ion-input>
   </ion-item>
-  <h1>
-    Teste
-  </h1>
-</ion-content>
 
-<ion-footer>
-  <ion-toolbar>
-    Eu sou o footer !!
-  </ion-toolbar>
-</ion-footer>
+  <button ion-button block clear (click)="showGreeting(personName)">Show Greeting</button>
+</ion-content>
