@@ -13,5 +13,15 @@
     <ion-input type="text" [(ngModel)]="personName"></ion-input>
   </ion-item>
 
+  <button ion-button (click)="navigateToSecondPage()" color="danger">Navigate to Second Page</button>
+
+  <button ion-button block (click)="navigateToThirdPage()" color="secondary">Navigate to Third Page</button>
+
   <button ion-button block clear (click)="showGreeting(personName)">Show Greeting</button>
+
+  <ion-fab bottom right padding-right>
+    <button ion-fab color="light">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>

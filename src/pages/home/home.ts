@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ToastController } from 'ionic-angular';
+import { NavController, ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -9,7 +9,7 @@ export class HomePage {
 
   personName: string;
 
-  constructor(public toast: ToastController) {
+  constructor(public nvrCtl: NavController, private toast: ToastController) {
 
   }
 
@@ -19,6 +19,16 @@ export class HomePage {
       duration: 3000
     }).present();
     
+  }
+
+  navigateToSecondPage(){
+    this.nvrCtl.push('SecondPage', {
+      message:"Hello from to HomePage",
+    });
+  }
+
+  navigateToThirdPage(){
+    this.nvrCtl.setRoot('ThirdPage');
   }
 
 }
